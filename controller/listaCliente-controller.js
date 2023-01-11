@@ -25,18 +25,16 @@ tabela.addEventListener('click',async (evento) => {
     if (ehBotaoDeDeleta) {
         const linhaCliente = evento.target.closest('[data-id]')
         let id = linhaCliente.dataset.id
-        clienteService.removeCliente(id)
-            .then(() => {
-                linhaCliente.remove()
-            })
-
+        await clienteService.removeCliente(id)
+        linhaCliente.remove()
     }
 })
-
-
-clienteService.listaClientes()
-    .then(data => {
-        data.forEach(elemento => {
-            tabela.appendChild(criaNovaLinha(elemento.nome, elemento.email, elemento.id))
-        })
+const render = async () => {
+    const listaCliente = await clienteService.listaClientes()
+    listaCliente.forEach(elemento => {
+        tabela.appendChild(criaNovaLinha(elemento.nome, 
+        elemento.email, elemento.id))
     })
+    
+}
+render()
