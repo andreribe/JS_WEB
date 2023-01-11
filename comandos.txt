@@ -1,0 +1,23 @@
+Script started on 2022-11-08 17:33:01-03:00 [TERM="xterm-256color" TTY="/dev/pts/8" COLUMNS="169" LINES="37"]
+]0;andredev-pc@andredev: ~/cursos/javascript/admin[01;32mandredev-pc@andredev[00m:[01;34m~/cursos/javascript/admin[00m$ json-server --watch db.json
+
+[36m  \{^_^}/ hi![39m
+
+[90m  Loading db.json[39m
+[90m  Done[39m
+
+[1m  Resources[22m
+  http://localhost:3000/profile
+
+[1m  Home[22m
+  http://localhost:3000
+
+[90m  Type s + enter at any time to create a snapshot of the database[39m
+[90m  Watching...[39m
+
+^C
+]0;andredev-pc@andredev: ~/cursos/javascript/admin[01;32mandredev-pc@andredev[00m:[01;34m~/cursos/javascript/admin[00m$ exit
+exit
+
+Script done on 2022-11-08 17:38:00-03:00 [COMMAND_EXIT_CODE="130"]
+browser-sync start --server --file . --host --port 5000 --startPath admin/telas/lista_cliente.html
